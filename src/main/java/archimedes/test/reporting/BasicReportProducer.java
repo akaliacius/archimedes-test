@@ -1,13 +1,20 @@
 package archimedes.test.reporting;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BasicReportProducer implements ReportProducer {
+    private final ApplicationContext context;
+
+    public BasicReportProducer(ApplicationContext context) {
+        this.context = context;
+    }
+
     @Override
     public void makeReport(){
         var request = new ReportRequest();
-        var report = new CsvReport();
-
-        report.generate(request, r -> ReportData.builder()
-                .name("Super simple report")
-                .build());
+        var report = context.getBean(CsvReport.class);
+        report.generate(request, context.getBean(CallOperatorReportGen.class));
     }
 }
