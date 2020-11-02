@@ -20,6 +20,8 @@ repositories {
 dependencies {
     implementation("org.springframework:spring-context:5.2.7.RELEASE")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.11.3")
+    testImplementation("org.mockito:mockito-core:3.6.0")
+    testImplementation("org.mockito:mockito-junit-jupiter:3.6.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.2")
 }
