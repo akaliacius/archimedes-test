@@ -13,7 +13,7 @@ public class BasicReportProducer implements ReportProducer {
 
     @Override
     public void makeReport(){
-        var request = new ReportRequest();
+        var request = ReportRequest.builder().build();
         var report = context.getBean(CsvReport.class);
         report.generate(request, context.getBean(CallOperatorReportGen.class));
     }

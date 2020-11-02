@@ -22,6 +22,6 @@ public class CallOperatorReportGenTest {
     }
 
     @Test void dataNotNull(){
-        assertNotNull(testable.apply(new ReportRequest()), "data must not be null");
+        assertNotNull(testable.apply(ReportRequest.builder().build()), "data must not be null");
     }
 }

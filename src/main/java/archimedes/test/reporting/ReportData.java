@@ -11,9 +11,9 @@ public class ReportData {
     }
 
     static class Builder {
-        private ReportData data;
+        private final ReportData data;
 
-        public Builder() {
+        private Builder() {
             this.data = new ReportData();
         }
 
