@@ -1,8 +1,6 @@
 package archimedes.test.reporting;
 
-import archimedes.test.data.DataService;
-import archimedes.test.data.model.CallData;
-import archimedes.test.data.model.OperatorData;
+import archimedes.test.data.repo.FileDataRepository;
 import archimedes.test.reporting.generators.CallOperatorReportGen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,14 +10,11 @@ import static org.mockito.Mockito.mock;
 
 public class CallOperatorReportGenTest {
     private CallOperatorReportGen testable;
-
-    private DataService<CallData> callServiceMock;
-    private DataService<OperatorData> operatorServiceMock;
+    private FileDataRepository repository;
 
     @BeforeEach void setup(){
-        callServiceMock = (DataService<CallData>) mock(DataService.class);
-        operatorServiceMock = (DataService<OperatorData>) mock(DataService.class);
-        testable = new CallOperatorReportGen(callServiceMock, operatorServiceMock);
+        repository = mock(FileDataRepository.class);
+        testable = new CallOperatorReportGen(repository);
     }
 
     @Test void dataNotNull(){
