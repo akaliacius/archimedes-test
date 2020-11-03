@@ -1,7 +1,7 @@
 package archimedes.test.reporting;
 
-import java.util.function.Function;
+import archimedes.test.reporting.generators.ReportGenerator;
 
 public abstract class Report {
-    abstract void generate(ReportRequest reportRequest, Function<ReportRequest, ReportData> reportGenerator);
+    abstract void generate(ReportRequest reportRequest, ReportGenerator reportGenerator);
 }
