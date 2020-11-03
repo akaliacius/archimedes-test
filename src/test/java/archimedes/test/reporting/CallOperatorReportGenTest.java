@@ -3,6 +3,7 @@ package archimedes.test.reporting;
 import archimedes.test.data.DataService;
 import archimedes.test.data.model.CallData;
 import archimedes.test.data.model.OperatorData;
+import archimedes.test.reporting.generators.CallOperatorReportGen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

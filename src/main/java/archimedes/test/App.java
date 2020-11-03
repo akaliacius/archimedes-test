@@ -21,6 +21,7 @@ public class App {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(App.class);
         var app = context.getBean(App.class);
+        // leaving space for different implementations of report producer
         var producer = context.getBean(app.reportProducer, ReportProducer.class);
         producer.makeReport();
     }
