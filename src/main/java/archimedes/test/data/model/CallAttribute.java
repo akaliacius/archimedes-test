@@ -26,4 +26,24 @@ public class CallAttribute {
     public void setRedList(boolean redList) {
         this.redList = redList;
     }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public double getRiskScore() {
+        return riskScore;
+    }
+
+    public boolean isGreenList() {
+        return greenList;
+    }
+
+    public boolean isRedList() {
+        return redList;
+    }
 }

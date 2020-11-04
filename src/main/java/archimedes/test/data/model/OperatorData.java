@@ -7,4 +7,8 @@ public class OperatorData extends Data {
     public void setAttributes(OperatorAttribute attributes) {
         this.attributes = attributes;
     }
+
+    public OperatorAttribute getAttributes() {
+        return attributes;
+    }
 }

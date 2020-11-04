@@ -11,4 +11,12 @@ public class OperatorAttribute {
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
+    public String getPrefix() {
+        return prefix;
+    }
+
+    public String getOperator() {
+        return operator;
+    }
 }

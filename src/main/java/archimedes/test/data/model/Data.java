@@ -11,4 +11,12 @@ public abstract class Data {
     public void setType(String type) {
         this.type = type;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getType() {
+        return type;
+    }
 }

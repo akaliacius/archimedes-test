@@ -6,4 +6,8 @@ public class CallData extends Data {
     public void setAttributes(CallAttribute attributes) {
         this.attributes = attributes;
     }
+
+    public CallAttribute getAttributes() {
+        return attributes;
+    }
 }
