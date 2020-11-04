@@ -21,14 +21,18 @@ public class ReportData {
         }
     }
 
+    public List<String> getColumnValues(String columnName){
+        return reportData.get(columnName);
+    }
+
     public List<String> getHeaders(){
         return reportData.entrySet().stream()
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
     }
 
-    public Map<String, List<String>> getReportData() {
-        return reportData;
+    public boolean isEmpty(){
+        return reportData.isEmpty();
     }
 
     public static Builder builder(){

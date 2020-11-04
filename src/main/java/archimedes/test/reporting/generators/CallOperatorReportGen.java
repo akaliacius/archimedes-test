@@ -36,8 +36,8 @@ public class CallOperatorReportGen implements ReportGenerator {
     @Override
     public ReportData apply(ReportRequest reportRequest) {
         try {
-            var calls = repository.getAllCalls("calls.json");
-            operators = repository.getAllOperators("operators.json");
+            var calls = repository.getAllCalls(reportRequest.getParameter("calls"));
+            operators = repository.getAllOperators(reportRequest.getParameter("operators"));
             calls.forEach(call -> {
                 addData(call, reportData, ID, CallData::getId);
                 addData(call, reportData, DATE, callToDate);

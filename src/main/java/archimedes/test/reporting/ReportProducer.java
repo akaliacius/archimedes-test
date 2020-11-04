@@ -1,5 +1,5 @@
 package archimedes.test.reporting;
 
 public interface ReportProducer {
-    void makeReport();
+    void makeReport(ReportRequest request);
 }

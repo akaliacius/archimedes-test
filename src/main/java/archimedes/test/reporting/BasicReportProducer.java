@@ -32,8 +32,7 @@ public class BasicReportProducer implements ReportProducer {
     }
 
     @Override
-    public void makeReport(){
-        var request = ReportRequest.builder().build();
+    public void makeReport(ReportRequest request){
         var report = context.getBean(ReportType.CSV_REPORT.type, Report.class);
         report.generate(request, context.getBean(ReportName.CALL_OPERATOR_REPORT.reportName,
                 ReportGenerator.class));

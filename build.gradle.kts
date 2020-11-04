@@ -20,6 +20,9 @@ repositories {
 dependencies {
     implementation("org.springframework:spring-context:5.2.7.RELEASE")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.11.3")
+    implementation("org.apache.commons:commons-csv:1.8"){
+        because("it's used to generate CSV reports")
+    }
     testImplementation("org.mockito:mockito-core:3.6.0")
     testImplementation("org.mockito:mockito-junit-jupiter:3.6.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.2")
