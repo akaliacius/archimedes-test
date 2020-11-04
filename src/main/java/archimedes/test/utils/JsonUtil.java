@@ -12,6 +12,10 @@ import java.util.stream.StreamSupport;
 
 public final class JsonUtil {
 
+    private JsonUtil(){
+        throw new IllegalStateException();
+    }
+
     public static List<Object> getAllData(File file, Class klass, Predicate<Object> validation) throws IOException {
         var mapper = new ObjectMapper();
         var rootNode = mapper.readTree(file);
