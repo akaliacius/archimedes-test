@@ -14,7 +14,6 @@ public class CsvReport extends Report {
     @Override
     void generate(ReportRequest reportRequest, ReportGenerator reportGenerator) {
         var reportData = reportGenerator.apply(reportRequest);
-        reportData.getHeaders().forEach(System.out::println);
         if(Objects.nonNull(reportData) && !reportData.isEmpty()){
             var headers = reportData.getHeaders();
             try (CSVPrinter printer = new CSVPrinter(new FileWriter(reportRequest.getParameter("destination")), CSVFormat.EXCEL)) {
